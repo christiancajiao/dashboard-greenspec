@@ -1,0 +1,43 @@
+.container {
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+  border-radius: 500px;
+  display: flex;
+  flex-direction: row;
+
+  input {
+    height: 65px;
+    border: none;
+    width: 33vw;
+    border-radius: 500px;
+    margin-left: 1em;
+    font-size: larger;
+    padding: 1em;
+  }
+  ::placeholder {
+    color: rgb(29, 7, 41);
+    opacity: 1;
+    padding-left: 2em;
+    font-size: larger;
+  }
+  button {
+    background-color: rgb(31, 4, 75);
+    margin-left: 0.5em;
+    color: white;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    width: 60px;
+    font-size: 30px;
+    img {
+      transform: scale(1.5);
+    }
+  }
+}
+.title {
+  font-weight: bold;
+  margin-left: 1em;
+  font-size: large;
+  margin: 0.5em;
+}
