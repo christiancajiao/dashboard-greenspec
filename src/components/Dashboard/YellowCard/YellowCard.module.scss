@@ -1,6 +1,7 @@
 .container {
   display: flex;
-  height: 25vh;
+  height: 100%;
+  width: 100%;
 }
 .title {
   font-weight: bold;
@@ -33,4 +34,9 @@
 }
 .content {
   color: #685114;
+}
+@media (max-width: 800px) {
+  .container_section {
+    height: 100%;
+  }
 }

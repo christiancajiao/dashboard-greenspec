@@ -1,0 +1,26 @@
+.chart {
+  height: 70%;
+  max-width: 200px; /* Set a fixed height or let it scale */
+  margin: 0 auto; /* Center the chart */
+  canvas {
+    width: 200px;
+  }
+}
+@media (max-width: 1200px) {
+  .chart {
+    max-width: 100px; /* Set a fixed height or let it scale */
+
+    canvas {
+      width: 100px;
+    }
+  }
+}
+@media (max-width: 1000px) {
+  .chart {
+    max-width: 100px; /* Set a fixed height or let it scale */
+
+    canvas {
+      width: 100px;
+    }
+  }
+}

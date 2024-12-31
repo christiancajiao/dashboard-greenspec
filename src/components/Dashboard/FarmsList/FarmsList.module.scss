@@ -7,6 +7,23 @@
   align-items: center;
   justify-content: space-around;
   flex-direction: row;
+  dl {
+    width: 80%;
+
+    dt {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}
+dt:hover {
+  color: rgb(8, 8, 218);
+  img {
+    filter: invert(34%) sepia(83%) saturate(743%) hue-rotate(198deg)
+      brightness(92%) contrast(95%);
+    /* Adjust the filter values to match your desired hover color */
+  }
 }
 .top_text {
   font-size: 20px;

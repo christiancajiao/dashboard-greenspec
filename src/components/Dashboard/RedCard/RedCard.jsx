@@ -18,11 +18,13 @@ function RedCard({ title, temperature, color }) {
             <span>
               Min <input type="number" />
             </span>
-            <span style={{ marginLeft: "1em" }}>
+            <span>
               Max <input type="number" />
             </span>
           </div>
-          <Settings id="5" />
+          <div>
+            <Settings id="5" />
+          </div>
         </div>
       </div>
     </div>

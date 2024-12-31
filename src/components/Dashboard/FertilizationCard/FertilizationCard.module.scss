@@ -18,3 +18,15 @@
   border-left: 4px solid #ffffff;
   padding-left: 1.5em;
 }
+@media (max-width: 1200px) {
+  .top_text {
+    font-size: 15px;
+  }
+  .bottom_text {
+    font-size: 25px;
+  }
+  .line {
+    border-left: 4px solid #ffffff;
+    padding-left: 1.5em;
+  }
+}

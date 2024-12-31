@@ -2,6 +2,7 @@ import styles from "./BlueCard.module.scss";
 import icon from "../../../assets/valve.svg";
 import TitleIcon from "../../Atoms/TitleIcon/TtileIcon";
 import Settings from "../../Atoms/Settings/Settings";
+import ValvesChart from "../ValvesChart/ValvesChart";
 
 function BlueCard({ title, temperature, color }) {
   return (
@@ -11,7 +12,7 @@ function BlueCard({ title, temperature, color }) {
       </div>
       <div className={styles.content_container}>
         <div className={styles.left_section} style={{ color: color }}>
-          Graph
+          <ValvesChart />
         </div>
         <div className={styles.rigth_section}>
           <div
@@ -19,8 +20,8 @@ function BlueCard({ title, temperature, color }) {
             style={{ marginTop: "1em", marginBottom: "1em" }}
           >
             <Settings id="1" />
+            <Settings id="2" />
           </div>
-          <Settings id="2" />
         </div>
       </div>
     </div>

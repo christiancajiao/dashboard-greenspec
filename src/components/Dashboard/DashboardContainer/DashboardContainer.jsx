@@ -1,7 +1,7 @@
 import Card from "../Card/Card";
 import styles from "./DashboardContainer.module.scss";
 import { DataContext } from "../../../Providers/DataProvider/DataProvider";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import TemperatureChart from "../TemperatureChart/TemperatureChart";
 import ColorCard from "../ColorCard/ColorCard";
 import Status from "../Status/Status";
@@ -17,7 +17,7 @@ import ClimeCard from "../ClimeCard/ClimeCard";
 import FertilizationCard from "../FertilizationCard/FertilizationCard";
 import FarmsList from "../FarmsList/FarmsList";
 import ProgramSettings from "../ProgramSettings/ProgramSettings";
-import { height, width } from "@mui/system";
+import FertiChart from "../FertiChart/FertiChart";
 
 function DashboardContainer() {
   const { dataUser } = useContext(DataContext);
@@ -56,7 +56,7 @@ function DashboardContainer() {
         <div className={styles.monitor_sensors}>
           <Card title="Monitor Sensors">
             <div className={styles.sensors_layout}>
-              <ColorCard color="#dbffeb" width="20%" textcolor="#138349">
+              <ColorCard color="#dbffeb" textcolor="#138349">
                 <GreenCard
                   title1="Compart"
                   title2="Vents"
@@ -64,7 +64,7 @@ function DashboardContainer() {
                   color="#138349"
                 />
               </ColorCard>
-              <ColorCard color="#ffe6bf" width="45%">
+              <ColorCard color="#ffe6bf">
                 <YellowCard color="#cc9b0f" />
               </ColorCard>
               <div className={styles.sensors_layout_subdivision}>
@@ -75,7 +75,7 @@ function DashboardContainer() {
                     color="#9b1118"
                   />
                 </ColorCard>
-                <ColorCard color="#dae7f0" width="100%">
+                <ColorCard color="#dae7f0" width="100%" height="100%">
                   <BlueCard color="#11289b" title="Valves" />
                 </ColorCard>
               </div>
@@ -85,23 +85,32 @@ function DashboardContainer() {
         <div className={styles.climate_overview}>
           <Card title="Climate Overview">
             <div className={styles.container_status}>
-              <ColorCard color="#fdd866" width="20%" title="Ligth Intensitiy">
-                <ClimeCard />
-              </ColorCard>
+              <div>
+                <ColorCard color="#fdd866">
+                  <ClimeCard />
+                </ColorCard>
+              </div>
+
               <TemperatureChart></TemperatureChart>
             </div>
           </Card>
         </div>
         <div className={styles.ferti_overview}>
           <Card title="Ferti Overview">
-            <ColorCard
-              color="#8cddb0"
-              width="40%"
-              title="Next Fertilization"
-              textcolor="white"
-            >
-              <FertilizationCard />
-            </ColorCard>
+            <div className={styles.ferti_container}>
+              <div className={styles.ferti_card}>
+                <ColorCard
+                  color="#8cddb0"
+                  title="Next Fertilization"
+                  textcolor="white"
+                >
+                  <FertilizationCard />
+                </ColorCard>
+              </div>
+              <div className={styles.ferti_chart}>
+                <FertiChart />
+              </div>
+            </div>
           </Card>
         </div>
       </section>

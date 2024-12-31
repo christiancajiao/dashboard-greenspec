@@ -3,10 +3,23 @@
   margin-left: 0.5em;
   margin-right: 0.5em;
   margin-bottom: 0.5em;
+  width: 100%; // Default width for other cases
 }
+
 .title {
   font-weight: bold;
   margin-left: 1em;
   font-size: large;
   margin: 0.5em;
+}
+
+/* Special styles for color "#dbffeb" */
+.specialWidth {
+  width: 50%; /* Default width when color is "#dbffeb" */
+}
+
+@media (max-width: 1100px) {
+  .specialWidth {
+    width: 100%; /* Change to full width for small screens */
+  }
 }

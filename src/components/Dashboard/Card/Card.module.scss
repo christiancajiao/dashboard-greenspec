@@ -18,7 +18,17 @@
 .content {
   display: flex;
   align-items: center;
-  justify-content: center;
   height: 100%;
   width: 100%;
+}
+@media (max-width: 730px) {
+  .container {
+    border-radius: 10px;
+    background-color: white;
+    width: 90%;
+    height: 100%;
+    contain: content;
+    overflow: hidden;
+    padding: 0px;
+  }
 }

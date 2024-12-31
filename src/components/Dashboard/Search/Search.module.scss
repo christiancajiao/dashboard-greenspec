@@ -41,3 +41,34 @@
   font-size: large;
   margin: 0.5em;
 }
+@media (min-width: 800px) and (max-width: 1200px) {
+  .container {
+    input {
+      height: 65px;
+      border: none;
+      width: 25vw;
+      border-radius: 500px;
+      margin-left: 1em;
+      font-size: small;
+      padding: 1em;
+    }
+    ::placeholder {
+      color: rgb(29, 7, 41);
+      opacity: 1;
+      padding-left: 2em;
+      font-size: normal;
+    }
+    button {
+      background-color: rgb(31, 4, 75);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      padding: 0%;
+      img {
+        transform: scale(1);
+      }
+    }
+  }
+}

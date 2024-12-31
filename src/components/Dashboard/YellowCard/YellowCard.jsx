@@ -31,10 +31,7 @@ function YellowCard({ color }) {
           color={color}
         />
       </div>
-      <div
-        className={styles.container_subdivision}
-        style={{ borderLeft: "2px solid #cc9b0f" }}
-      >
+      <div className={styles.container_subdivision}>
         <SingleSection
           title="Irrigation Unit"
           icon={find}
