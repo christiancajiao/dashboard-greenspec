@@ -41,12 +41,13 @@
   font-size: large;
   margin: 0.5em;
 }
-@media (min-width: 800px) and (max-width: 1200px) {
+
+@media (max-width: 1000px) {
   .container {
     input {
       height: 65px;
       border: none;
-      width: 25vw;
+      width: 50vw;
       border-radius: 500px;
       margin-left: 1em;
       font-size: small;

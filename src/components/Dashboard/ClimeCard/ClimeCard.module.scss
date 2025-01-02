@@ -79,5 +79,28 @@
   .title {
     color: rgb(36, 27, 100);
     font-size: 12px;
+    padding-left: 1em;
+  }
+}
+@media (max-width: 500px) {
+  .container {
+    width: 20px;
+    img {
+      transform: scale(1.5);
+      position: relative;
+      top: -0.5em;
+      left: 0.3em;
+    }
+  }
+
+  .text1 {
+    font-size: 30px;
+  }
+  .text2 {
+    font-size: 15px;
+  }
+  .title {
+    color: rgb(36, 27, 100);
+    font-size: 12px;
   }
 }

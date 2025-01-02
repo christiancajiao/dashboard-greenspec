@@ -1,5 +1,6 @@
 .sidebar {
   width: 100%;
+  height: 93vh;
   margin-top: 1em;
   nav {
     display: flex;
@@ -15,6 +16,29 @@
     img {
       transform: scale(1.5);
       margin: 1em;
+    }
+  }
+}
+@media (max-width: 1000px) {
+  .sidebar {
+    width: 100%;
+    height: fit-content;
+    margin-top: 1em;
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      flex-direction: column;
+      button {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        width: 100%;
+      }
+      img {
+        transform: scale(1.5);
+        margin: 1em;
+      }
     }
   }
 }

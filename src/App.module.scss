@@ -29,3 +29,43 @@
 .content {
   width: 100%;
 }
+@media (max-width: 1000px) {
+  .layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 120%;
+  }
+  .column_aligment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 105%;
+    height: fit-content;
+  }
+  .sidebar {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .topbar {
+    button {
+      height: 92%;
+    }
+  }
+}
+@media (max-width: 900px) {
+  .layout {
+    width: 110%;
+  }
+}
+@media (max-width: 800px) {
+  .layout {
+    width: 100%;
+  }
+}

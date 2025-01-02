@@ -1,0 +1,12 @@
+@mixin flex-center($direction: row, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+.container_status {
+  @include flex-center();
+  justify-content: space-around;
+
+  width: 100%;
+}

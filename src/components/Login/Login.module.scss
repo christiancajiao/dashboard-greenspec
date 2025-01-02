@@ -1,0 +1,45 @@
+.container_login {
+  z-index: 2;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(231, 225, 236);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 10px;
+  height: 40vh;
+  width: 30vw;
+}
+.field {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  input {
+    border-radius: 30px;
+    border: 1px solid rgb(57, 57, 143);
+    width: 70%;
+    height: 50px;
+    font-size: large;
+    padding-left: 1em;
+  }
+}
+.submit {
+  background-color: rgb(164, 164, 253);
+  margin-top: 2em;
+}
+.submit:hover {
+  background-color: rgb(57, 57, 143);
+  color: white;
+  margin-top: 2em;
+}
