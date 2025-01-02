@@ -1,20 +1,20 @@
+import { useData } from "../../../Hooks/useData";
 import styles from "./FertilizationCard.module.scss";
 
 function FertilizationCard() {
+  const { dataUser } = useData();
+
+  const nextDates = dataUser[0]?.nextFertilization;
   return (
     <div className={styles.container}>
-      <div>
-        <div className={styles.top_text}>June</div>
-        <div className={styles.bottom_text}>15</div>
-      </div>
-      <div className={styles.line}>
-        <div className={styles.top_text}>June</div>
-        <div className={styles.bottom_text}>30</div>
-      </div>
-      <div className={styles.line}>
-        <div className={styles.top_text}>July</div>
-        <div className={styles.bottom_text}>15</div>
-      </div>
+      {nextDates.map((date, index) => {
+        return (
+          <div className={index > 0 && index ? styles.line : null}>
+            <div className={styles.top_text}>{date?.month}</div>
+            <div className={styles.bottom_text}>{date?.day}</div>
+          </div>
+        );
+      })}
     </div>
   );
 }

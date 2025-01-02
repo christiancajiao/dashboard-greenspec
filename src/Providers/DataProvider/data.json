@@ -2,7 +2,9 @@
     "user": {
       "id": 1,
       "name": "Elsa",
-      "email": "elsa@example.com"
+      "email": "elsa@example.com",
+      "location": "Bogota",
+      "phone": 123456
     },
     "farms": [
       {
@@ -18,19 +20,31 @@
           { "day": "Sunday", "lightIntensity": 40, "temperature": 24 }
         ],
         "fertilizerStock": [
-          { "type": "Special", "stock": 20 },
-          { "type": "A1", "stock": 15 },
-          { "type": "A2", "stock": 10 },
-          { "type": "B1", "stock": 12 },
-          { "type": "B2", "stock": 8 }
+          { "color": "#fdd866","type": "Special", "stock": 20 },
+          { "color": "#a8d18c","type": "A1", "stock": 15 },
+          { "color": "#c5e0b5","type": "A2", "stock": 10 },
+          {"color": "#589bd8", "type": "B1", "stock": 12 },
+          { "color": "#9dc3e6","type": "B2", "stock": 8 }
         ],
         "sensors": {
           "compart": { "active": true, "stat": 102 },
           "irrigationUnit": { "stat": 98 },
           "meteo": { "stat": 105 },
           "events": { "stat": 100 },
-          "waterHeat": { "current": 12, "min": 10, "max": 15 }
-        }
+          "waterHeat": { "current": 12, "min": 10, "max": 15 },
+          "inputs": {"stat": 90}
+        },
+        "nextFertilization": [
+          {"month": "June", "day": 13 },
+          {"month": "June", "day": 30 },
+          {"month": "July", "day": 12 }
+        ],
+        "valves": [
+          {"value": 8},
+          {"value": 5},
+          {"value": 10},
+          {"value": 3}
+        ]
       },
       {
         "id": 102,
@@ -45,19 +59,31 @@
           { "day": "Sunday", "lightIntensity": 42, "temperature": 23 }
         ],
         "fertilizerStock": [
-          { "type": "Special", "stock": 18 },
-          { "type": "A1", "stock": 16 },
-          { "type": "A2", "stock": 12 },
-          { "type": "B1", "stock": 14 },
-          { "type": "B2", "stock": 9 }
+          { "color": "#fdd866","type": "Special", "stock": 60 },
+          { "color": "#a8d18c","type": "A1", "stock": 35 },
+          { "color": "#c5e0b5","type": "A2", "stock": 70 },
+          {"color": "#589bd8", "type": "B1", "stock": 92 },
+          { "color": "#9dc3e6","type": "B2", "stock": 85 }
         ],
         "sensors": {
           "compart": { "active": false },
           "irrigationUnit": { "stat": "" },
           "meteo": { "stat": 103 },
           "events": { "stat": "" },
-          "waterHeat": { "current": 15, "min": "", "max": 18 }
-        }
+          "waterHeat": { "current": 15, "min": "", "max": 18 },
+          "inputs": {"stat": 90}
+        },
+        "nextFertilization": [
+          {"month": "July", "day": 5 },
+          {"month": "July", "day": 22 },
+          {"month": "Agust", "day": 13 }
+        ],
+        "valves": [
+          {"value": 4},
+          {"value": 3},
+          {"value": 6},
+          {"value": 5}
+        ]
       },
       {
         "id": 103,
@@ -71,20 +97,32 @@
           { "day": "Saturday", "lightIntensity": 56, "temperature": 25 },
           { "day": "Sunday", "lightIntensity": 43, "temperature": 24 }
         ],
-        "fertilizerStock": [
-          { "type": "Special", "stock": 19 },
-          { "type": "A1", "stock": 14 },
-          { "type": "A2", "stock": 11 },
-          { "type": "B1", "stock": 13 },
-          { "type": "B2", "stock": 7 }
+       "fertilizerStock": [
+          { "color": "#fdd866","type": "Special", "stock": 80 },
+          { "color": "#a8d18c","type": "A1", "stock": 75 },
+          { "color": "#c5e0b5","type": "A2", "stock": 68 },
+          {"color": "#589bd8", "type": "B1", "stock": 70 },
+          { "color": "#9dc3e6","type": "B2", "stock": 99 }
         ],
         "sensors": {
           "compart": { "active": true, "stat": 101 },
           "irrigationUnit": { "stat": 99 },
           "meteo": { "stat": "" },
           "events": { "stat": 97 },
-          "waterHeat": { "current": "", "min": 12, "max": 15 }
-        }
+          "waterHeat": { "current": 3, "min": 12, "max": 15 },
+          "inputs": {"stat": 90}
+        },
+        "nextFertilization": [
+          {"month": "February", "day": 13 },
+          {"month": "April", "day": 20 },
+          {"month": "March", "day": 12 }
+        ],
+        "valves": [
+          {"value": 1},
+          {"value": 3},
+          {"value": 5},
+          {"value": 7}
+        ]
       },
       {
         "id": 104,
@@ -110,8 +148,20 @@
           "irrigationUnit": { "stat": 100 },
           "meteo": { "stat": 102 },
           "events": { "stat": 101 },
-          "waterHeat": { "current": 13, "min": 11, "max": 14 }
-        }
+          "waterHeat": { "current": 13, "min": 11, "max": 14 },
+          "inputs": {"stat": 90}
+        },
+        "nextFertilization": [
+          {"month": "June", "day": 13 },
+          {"month": "June", "day": 30 },
+          {"month": "July", "day": 12 }
+        ],
+        "valves": [
+          {"value": 8},
+          {"value": 7},
+          {"value": 8},
+          {"value": 2}
+        ]
       }
     ]
   }

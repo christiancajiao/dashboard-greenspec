@@ -8,7 +8,7 @@ function ClimateOverview() {
   return (
     <Card title="Climate Overview">
       <div className={styles.container_status}>
-        <div>
+        <div className={styles.card}>
           <ColorCard color="#fdd866">
             <ClimeCard />
           </ColorCard>

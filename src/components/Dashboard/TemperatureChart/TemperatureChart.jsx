@@ -11,6 +11,7 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
+import { useData } from "../../../Hooks/useData";
 
 // Register required components
 Chart.register(
@@ -25,8 +26,15 @@ Chart.register(
 );
 
 const TemperatureChart = () => {
-  const chartRef = useRef(null); // Reference to the canvas
-  const chartInstance = useRef(null); // Reference to the Chart instance
+  const chartRef = useRef(null);
+  const chartInstance = useRef(null);
+
+  const { dataUser } = useData();
+
+  const temperature =
+    dataUser[0]?.climateOverview.map((entry) => entry.temperature) || [];
+  const lightIntensity =
+    dataUser[0]?.climateOverview.map((entry) => entry.lightIntensity) || [];
 
   useEffect(() => {
     const ctx = chartRef.current.getContext("2d");
@@ -43,18 +51,18 @@ const TemperatureChart = () => {
         labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
         datasets: [
           {
-            label: "Temp 1",
-            data: [22, 24, 19, 23, 25, 20, 21],
+            label: "Temperature",
+            data: temperature,
             borderColor: "deeppink",
             backgroundColor: "transparent",
             fill: false,
-            tension: 0.4, // Smooth curve
-            borderWidth: 5, // Line thickness
-            pointRadius: 0, // No points
+            tension: 0.4,
+            borderWidth: 5,
+            pointRadius: 0,
           },
           {
-            label: "Temp 2",
-            data: [18, 21, 20, 22, 23, 19, 18],
+            label: "Light Intensity",
+            data: lightIntensity,
             borderColor: "blue",
             backgroundColor: "transparent",
             fill: false,
@@ -69,11 +77,8 @@ const TemperatureChart = () => {
         maintainAspectRatio: false,
         plugins: {
           legend: {
-            display: false,
+            display: true,
             position: "top",
-          },
-          tooltip: {
-            enabled: false,
           },
         },
         scales: {
@@ -86,7 +91,7 @@ const TemperatureChart = () => {
           y: {
             title: {
               display: false,
-              text: "Temperature (°C)",
+              text: "Value",
             },
             beginAtZero: false,
           },
@@ -94,13 +99,12 @@ const TemperatureChart = () => {
       },
     });
 
-    // Cleanup on component unmount
     return () => {
       if (chartInstance.current) {
         chartInstance.current.destroy();
       }
     };
-  }, []);
+  }, [dataUser]);
 
   return (
     <div className={style.chart}>

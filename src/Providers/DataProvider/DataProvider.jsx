@@ -1,19 +1,24 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 import data from "./data.json";
+import { DataContext } from "../../Hooks/useData";
 
-export const DataContext = createContext();
 function DataProvider({ children }) {
-  const [dataUser, setDataUser] = useState([]);
+  const [dataUser, setDataUser] = useState(null);
 
-  function selectFarm(selectedFarm = "Subachoque") {
+  function selectFarm(selectedFarm) {
     const filterFarm = data.farms.filter((farm) => {
       return farm.name === selectedFarm;
     });
     setDataUser(filterFarm);
   }
-  console.log(dataUser);
+  function initializeUserData() {
+    setDataUser(data.farms[0] || null);
+  }
+
   return (
-    <DataContext.Provider value={{ dataUser, selectFarm, data }}>
+    <DataContext.Provider
+      value={{ dataUser, selectFarm, data, initializeUserData }}
+    >
       {children}
     </DataContext.Provider>
   );

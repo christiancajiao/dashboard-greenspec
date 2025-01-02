@@ -2,31 +2,38 @@ import React, { useEffect, useRef } from "react";
 import Chart from "chart.js/auto";
 import style from "./ValvesChart.module.scss";
 import valve from "../../../assets/valve.svg";
+import { useData } from "../../../Hooks/useData";
 
 const ValvesChart = () => {
   const chartRef = useRef(null);
+  const chartInstance = useRef(null);
 
+  const { dataUser } = useData();
+  const values = dataUser[0]?.valves.map((entry) => entry.value) || [];
   useEffect(() => {
     const ctx = chartRef.current.getContext("2d");
 
-    // Icon to use at each point
+    if (chartInstance.current) {
+      chartInstance.current.destroy();
+    }
+
     const icon = new Image();
-    icon.src = valve; // Replace with your icon URL
+    icon.src = valve;
 
     // Initialize the chart
-    const chart = new Chart(ctx, {
+    chartInstance.current = new Chart(ctx, {
       type: "line",
       data: {
-        labels: ["Point 1", "Point 2", "Point 3", "Point 4"], // Labels for the X-axis
+        labels: ["Point 1", "Point 2", "Point 3", "Point 4"],
         datasets: [
           {
             label: "Custom Line Graph",
-            data: [10, 20, 15, 25], // Data points
+            data: values,
             borderColor: "blue",
             borderWidth: 2,
-            pointStyle: icon, // Use icon as the point style
-            pointRadius: 10, // Size of the icon
-            tension: 0.4, // Smooth lines
+            pointStyle: icon,
+            pointRadius: 10,
+            tension: 0.4,
           },
         ],
       },
@@ -34,21 +41,21 @@ const ValvesChart = () => {
         responsive: true,
         plugins: {
           legend: {
-            display: false, // Hide legend
+            display: false,
           },
         },
         scales: {
           x: {
             display: false,
             grid: {
-              display: false, // Remove grid lines
+              display: false,
             },
           },
           y: {
             display: false,
             beginAtZero: true,
             grid: {
-              drawBorder: false, // Remove border on Y-axis
+              drawBorder: false,
             },
           },
         },
@@ -57,9 +64,11 @@ const ValvesChart = () => {
 
     // Cleanup the chart on component unmount
     return () => {
-      chart.destroy();
+      if (chartInstance.current) {
+        chartInstance.current.destroy();
+      }
     };
-  }, []);
+  }, [dataUser]);
 
   return (
     <div className={style.chart}>

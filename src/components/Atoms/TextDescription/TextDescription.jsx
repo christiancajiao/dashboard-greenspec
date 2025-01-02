@@ -1,10 +1,10 @@
 import styles from "./TextDescription.module.scss";
 
-function TextDescription({ title }) {
+function TextDescription({ title, value }) {
   return (
     <div className={styles.container}>
       <span>{title}</span>
-      <span> 120x </span>
+      <span> {value} </span>
     </div>
   );
 }

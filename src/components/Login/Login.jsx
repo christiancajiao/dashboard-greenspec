@@ -2,12 +2,15 @@ import { useState } from "react";
 import { useAuth } from "../../Hooks/useAuth";
 import style from "./Login.module.scss";
 import { Navigate } from "react-router";
+import { useData } from "../../Hooks/useData";
 
 export default function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
   const { login, user } = useAuth();
+
+  const { selectFarm } = useData();
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -17,6 +20,7 @@ export default function Login() {
       setError("Invalid credentials");
     } else {
       setError(null);
+      selectFarm("Subachoque");
     }
   };
 

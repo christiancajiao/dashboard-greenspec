@@ -1,26 +1,19 @@
-import Card from "../Card/Card";
 import styles from "./DashboardContainer.module.scss";
-import { DataContext } from "../../../Providers/DataProvider/DataProvider";
-import { useContext, useEffect } from "react";
-import TemperatureChart from "../TemperatureChart/TemperatureChart";
-import ColorCard from "../ColorCard/ColorCard";
 import StatusContainer from "../Status/Status";
 import Search from "../Search/Search";
-import ClimeCard from "../ClimeCard/ClimeCard";
-import FertilizationCard from "../FertilizationCard/FertilizationCard";
 import FarmSection from "../FarmsList/FarmsList";
 import ProgramSettingsSection from "../ProgramSettings/ProgramSettings";
-import FertiChart from "../FertiChart/FertiChart";
 import MonitorSensorsSection from "../MonitorSensors/MonitorSensors";
 import ClimateOverview from "../ClimateOverview/ClimateOverview";
 import FertiOverview from "../FertiOverview/FertiOverview";
+import { useData } from "../../../Hooks/useData";
 
 /**
  * Main Dashboard Container
  * Displays user information, search, and multiple cards for monitoring data.
  */
 function DashboardContainer() {
-  const { data } = useContext(DataContext);
+  const { data } = useData();
 
   return (
     <main className={styles.section_container}>

@@ -1,10 +1,10 @@
 import styles from "./Search.module.scss";
 import search from "../../../assets/search.svg";
-import { useContext, useState } from "react";
-import { DataContext } from "../../../Providers/DataProvider/DataProvider";
+import { useState } from "react";
+import { useData } from "../../../Hooks/useData";
 
 function Search({}) {
-  const { dataUser } = useContext(DataContext);
+  const { dataUser } = useData();
 
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredFarms, setFilteredFarms] = useState(dataUser?.farms);

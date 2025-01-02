@@ -1,10 +1,9 @@
-import { useContext } from "react";
 import style from "./Settings.module.scss";
-import { DataContext } from "../../Providers/DataProvider/DataProvider";
 import settings from "../../assets/settings.svg";
+import { useData } from "../../Hooks/useData";
 
 export default function Settings() {
-  const { dataUser } = useContext(DataContext);
+  const { data } = useData();
 
   return (
     <section className={style.section_container}>
@@ -16,11 +15,11 @@ export default function Settings() {
         <div className={style.info}>
           <div className={style.info_content}>
             <span>Name:</span>
-            <span>{dataUser.user.name}</span>
+            <span>{data?.user?.name}</span>
           </div>
           <div className={style.info_content}>
             <span>Email:</span>
-            <span>{dataUser.user.email}</span>
+            <span>{data?.user?.email}</span>
           </div>
           <div className={style.info_content}>
             <span>Location:</span>

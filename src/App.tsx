@@ -3,7 +3,7 @@ import LoginProvider from "./Providers/LoginProvider/LoginProvider";
 import DataProvider from "./Providers/DataProvider/DataProvider";
 import DashboardContainer from "./components/Dashboard/DashboardContainer/DashboardContainer";
 import Sidebar from "./components/Sidebar/Sidebar.jsx";
-import { useContext, useState } from "react";
+import { useState } from "react";
 import Modal from "./components/Modal/Modal.jsx";
 import ModalProvider from "./Providers/ModalProvider/ModalProvider.jsx";
 import { Route, Routes } from "react-router";

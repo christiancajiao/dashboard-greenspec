@@ -1,10 +1,9 @@
 import style from "./Contact.module.scss";
 import contact from "../../assets/contact_mail.svg";
-import { useContext } from "react";
-import { DataContext } from "../../Providers/DataProvider/DataProvider";
+import { useData } from "../../Hooks/useData";
 
 export default function Contact() {
-  const { dataUser } = useContext(DataContext);
+  const { dataUser } = useData();
 
   return (
     <section className={style.section_container}>
