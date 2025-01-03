@@ -1,5 +1,6 @@
 import React, { createContext, useState } from "react";
 import { AuthContext } from "../../Hooks/useAuth";
+import { useData } from "../../Hooks/useData";
 export const LoginContext = createContext();
 
 function LoginProvider({ children }) {
@@ -7,8 +8,8 @@ function LoginProvider({ children }) {
 
   const login = (username, password) => {
     const hardcodedUser = {
-      username: "t",
-      password: "p",
+      username: "elsa@greenspec.com",
+      password: "12345",
     };
 
     if (

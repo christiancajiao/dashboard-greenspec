@@ -2,7 +2,8 @@
     "user": {
       "id": 1,
       "name": "Elsa",
-      "email": "elsa@example.com",
+      "email": "elsa@greenspec.com",
+      "password": 12345,
       "location": "Bogota",
       "phone": 123456
     },
