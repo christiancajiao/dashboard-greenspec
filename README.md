@@ -1,50 +1,52 @@
-# React + TypeScript + Vite
+# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🚀 Project Overview
 
-Currently, two official plugins are available:
+This project demonstrates a React application built using Vite for fast development. Below, you'll find the credentials to access the login screen, instructions to run the project locally, and additional notes explaining the development process.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Credentials for Login
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Email:** `elsa@greenspec.com`  
+- **Password:** `12345`  
 
-- Configure the top-level `parserOptions` property like this:
+---
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🔧 How to Run Locally
+
+1. **Clone the repository**  
+   ```bash
+   git clone <repository-url>
+Install dependencies
+2. **Start the development server**  
+
+ ```bash
+npm install
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+npm run dev
 ```
+
+
+## Additional Notes
+Design Challenges
+The original design included icons that I couldn't locate, so I replaced them with Google Icons (free and widely available).
+The specified font was also unavailable, so I selected a visually similar alternative. This may result in slight differences in size or properties such as boldness.
+Tools & Libraries
+I primarily prefer vanilla CSS for styling. However, to meet the time constraints:
+Switch Component: Implemented using Material-UI.
+Graphs: Created using Chart.js.
+All other components were handcrafted and styled by me.
+Data Handling
+Understanding the data and its relationships posed a significant challenge due to the complexity of the subject matter.
+To streamline development, I created a custom JSON file, data.json, located within the project files. This avoided reliance on an API and simplified the implementation process.
+Styling & Architecture
+Used the provider pattern for state and data sharing between components.
+Styling was done using SASS modules to ensure modularity and maintainability.
+Responsive Design
+Focused on maintaining design consistency across various breakpoints.
+📝 Final Thoughts
+While there is room for improvement, I aimed to deliver a design-consistent and functional project within the given constraints. I hope the result meets your expectations, and I look forward to discussing it with you soon.
+
