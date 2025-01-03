@@ -43,3 +43,16 @@
   color: white;
   margin-top: 2em;
 }
+@media (max-width: 900px) {
+  .card {
+    height: 60vh;
+    width: 80vw;
+  }
+  .field {
+    width: 80%;
+
+    input {
+      font-size: normal;
+    }
+  }
+}
