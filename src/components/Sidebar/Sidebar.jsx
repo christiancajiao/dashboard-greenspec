@@ -5,7 +5,7 @@ import settings from "../../assets/instant.svg";
 import contact from "../../assets/support.svg";
 import logoutIcon from "../../assets/logout_icon.svg";
 
-import { Link } from "react-router";
+import { Link, useLocation } from "react-router";
 import { useAuth } from "../../Hooks/useAuth";
 function Sidebar() {
   const { logout } = useAuth();
@@ -13,27 +13,51 @@ function Sidebar() {
   function handleLogout() {
     logout();
   }
-
+  const location = useLocation();
   return (
     <>
       <div className={style.sidebar}>
         <nav>
-          <button>
-            <img src={dashboard} />
-            <Link to="/dashboard">Dashboard</Link>
-          </button>
-          <button>
-            <img src={profile} />
-            <Link to="/profile">Profile</Link>
-          </button>
-          <button>
-            <img src={settings} />
-            <Link to="/settings">Parameters</Link>
-          </button>
-          <button>
-            <img src={contact} />
-            <Link to="/contact">Contact</Link>
-          </button>
+          <Link to="/dashboard">
+            <button
+              className={
+                location.pathname === "/dashboard" ? style.active : null
+              }
+            >
+              <img src={dashboard} />
+              Dashboard
+            </button>
+          </Link>
+
+          <Link to="/profile">
+            <button
+              className={location.pathname === "/profile" ? style.active : null}
+            >
+              <img src={profile} />
+              Profile{" "}
+            </button>
+          </Link>
+
+          <Link to="/settings">
+            <button
+              className={
+                location.pathname === "/settings" ? style.active : null
+              }
+            >
+              <img src={settings} />
+              Parameters{" "}
+            </button>
+          </Link>
+
+          <Link to="/contact">
+            <button
+              className={location.pathname === "/contact" ? style.active : null}
+            >
+              <img src={contact} />
+              Contact{" "}
+            </button>
+          </Link>
+
           <button style={{ alignSelf: "end" }} onClick={handleLogout}>
             <img src={logoutIcon} />
             Log out

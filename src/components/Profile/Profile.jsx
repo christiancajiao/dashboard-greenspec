@@ -23,7 +23,7 @@ export default function Profile() {
           </div>
           <div className={style.info_content}>
             <span>Location:</span>
-            <span>somewhere</span>
+            <span>{data?.user?.location}</span>
           </div>
         </div>
       </div>

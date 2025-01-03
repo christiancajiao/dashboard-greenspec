@@ -20,7 +20,7 @@
           { "day": "Sunday", "lightIntensity": 40, "temperature": 24 }
         ],
         "fertilizerStock": [
-          { "color": "#fdd866","type": "Special", "stock": 20 },
+          { "color": "#fdd866","type": "Special", "stock": 90 },
           { "color": "#a8d18c","type": "A1", "stock": 15 },
           { "color": "#c5e0b5","type": "A2", "stock": 10 },
           {"color": "#589bd8", "type": "B1", "stock": 12 },
@@ -59,7 +59,7 @@
           { "day": "Sunday", "lightIntensity": 42, "temperature": 23 }
         ],
         "fertilizerStock": [
-          { "color": "#fdd866","type": "Special", "stock": 60 },
+          { "color": "#fdd866","type": "Special", "stock": 80 },
           { "color": "#a8d18c","type": "A1", "stock": 35 },
           { "color": "#c5e0b5","type": "A2", "stock": 70 },
           {"color": "#589bd8", "type": "B1", "stock": 92 },
@@ -98,7 +98,7 @@
           { "day": "Sunday", "lightIntensity": 43, "temperature": 24 }
         ],
        "fertilizerStock": [
-          { "color": "#fdd866","type": "Special", "stock": 80 },
+          { "color": "#fdd866","type": "Special", "stock": 99 },
           { "color": "#a8d18c","type": "A1", "stock": 75 },
           { "color": "#c5e0b5","type": "A2", "stock": 68 },
           {"color": "#589bd8", "type": "B1", "stock": 70 },

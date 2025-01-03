@@ -1,8 +1,6 @@
 .container {
   border-radius: 10px;
-  height: 100%;
   max-height: 150px;
-  width: 100%;
   min-width: 150px;
   overflow: hidden;
   display: flex;
@@ -10,9 +8,14 @@
   justify-content: space-around;
   flex-direction: column;
   color: white;
+  background-color: #fdd866;
+  margin-left: 1em;
   img {
     margin: 1px;
     transform: scale(2);
+    position: relative;
+    top: -10px;
+    left: 10px;
   }
 }
 .title {
@@ -33,6 +36,7 @@
 }
 .text1 {
   font-size: 40px;
+  padding-bottom: 0.3em;
 }
 .text2 {
   position: relative;
@@ -41,7 +45,7 @@
 }
 @media (max-width: 1300px) and (min-width: 1100px) {
   .container {
-    min-width: 80px;
+    min-width: 100px;
     img {
       transform: scale(1.5);
       position: relative;
@@ -62,7 +66,7 @@
 }
 @media (max-width: 730px) {
   .container {
-    min-width: 80px;
+    min-width: 100px;
     img {
       transform: scale(1.5);
       position: relative;

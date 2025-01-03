@@ -1,6 +1,6 @@
 import styles from "./FarmsList.module.scss";
 import check from "../../../assets/check_circle_gray.svg";
-import plant from "../../../assets/grass.svg";
+import plant from "../../../assets/potted_plant.svg";
 import yard from "../../../assets/yard.svg";
 import fruit from "../../../assets/nutrition0.svg";
 import Card from "../Card/Card";

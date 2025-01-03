@@ -2,23 +2,19 @@ import { useModal } from "../../Hooks/useModal";
 import styles from "./Modal.module.scss";
 
 function one() {
-  return (
-    <div>
-      <input type="checkbox" />
-    </div>
-  );
+  return <div>Valves Settings 1</div>;
 }
 function two() {
-  return <div>OPCION 2</div>;
+  return <div>Valves Settings 2</div>;
 }
 function three() {
-  return <div>OPCION 3</div>;
+  return <div>Quick Program Settings</div>;
 }
 function four() {
-  return <div>OPCION 4</div>;
+  return <div>Vent Settings</div>;
 }
 function five() {
-  return <div>OPCION 5</div>;
+  return <div>Water heat Settings</div>;
 }
 
 function Modal() {

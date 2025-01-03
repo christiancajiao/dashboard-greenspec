@@ -9,9 +9,7 @@ function ClimateOverview() {
     <Card title="Climate Overview">
       <div className={styles.container_status}>
         <div className={styles.card}>
-          <ColorCard color="#fdd866">
-            <ClimeCard />
-          </ColorCard>
+          <ClimeCard />
         </div>
 
         <TemperatureChart></TemperatureChart>

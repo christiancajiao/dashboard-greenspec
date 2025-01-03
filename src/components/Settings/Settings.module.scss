@@ -47,3 +47,13 @@
   justify-content: space-between;
   align-items: center;
 }
+@media (max-width: 1000px) {
+  .section_container {
+    width: 100vw;
+  }
+  .img_container {
+    img {
+      transform: scale(2);
+    }
+  }
+}

@@ -4,10 +4,10 @@ import { useState } from "react";
 import { useData } from "../../../Hooks/useData";
 
 function Search({}) {
-  const { dataUser } = useData();
+  const { dataUser, data } = useData();
 
   const [searchTerm, setSearchTerm] = useState("");
-  const [filteredFarms, setFilteredFarms] = useState(dataUser?.farms);
+  const [filteredFarms, setFilteredFarms] = useState(dataUser);
 
   const handleSearch = (e) => {
     e.preventDefault();
@@ -15,7 +15,7 @@ function Search({}) {
     setSearchTerm(term);
 
     // Filter farms based on the search term
-    const result = dataUser?.farms.filter((farm) =>
+    const result = data?.farms.filter((farm) =>
       JSON.stringify(farm).toLowerCase().includes(term)
     );
 
@@ -34,27 +34,19 @@ function Search({}) {
       <button onClick={handleSearch}>
         <img src={search} />
       </button>
-      {/* <ul>
-        {filteredFarms.map((farm) => (
+      {searchTerm.length > 2 ? (
+        <ul className={styles.options}>
+          {filteredFarms?.map((farm) => (
+            <div key={farm.id}>
+              <h3>{farm.name}</h3>
+            </div>
+          ))}
+        </ul>
+      ) : null}
+      {/* <ul className={styles.options}>
+        {filteredFarms?.map((farm) => (
           <li key={farm.id}>
             <h3>{farm.name}</h3>
-            <p>Climate Overview:</p>
-            <ul>
-              {farm.climateOverview.map((climate, index) => (
-                <li key={index}>
-                  {climate.day}: Light - {climate.lightIntensity}, Temp -{" "}
-                  {climate.temperature}°C
-                </li>
-              ))}
-            </ul>
-            <p>Fertilizer Stock:</p>
-            <ul>
-              {farm.fertilizerStock.map((fertilizer, index) => (
-                <li key={index}>
-                  {fertilizer.type}: {fertilizer.stock}
-                </li>
-              ))}
-            </ul>
           </li>
         ))}
       </ul> */}

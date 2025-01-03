@@ -39,6 +39,7 @@ function YellowCard({ color }) {
           value={inputs}
         />
       </div>
+      <span className={styles.line} />
       <div className={styles.container_subdivision}>
         <SingleSection
           title="Irrigation Unit"
